@@ -9,14 +9,22 @@ const MovieDetail = async ({ params }) => {
   console.log(movie);
 
   return (
-    <section className='relative w-full h-[400px] bg-red-300'>
+    <section className='absolute top-0 -z-10 w-full h-[460px]'>
+
       <Image 
         src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}                        
         priority
         width={1920}         
         height={400}
-        className='w-full h-full object-cover'
+        className='w-full h-full object-cover brightness-[60%]'
       />
+
+      <div className=" absolute left-0 bottom-4 w-full">
+        <div className='contenedor'>
+          <h1 className='text-gray-200 tracking-widest'>{movie.title}</h1>
+        </div>
+      </div>
+      
     </section>
   )
 }
