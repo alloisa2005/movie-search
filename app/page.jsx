@@ -6,7 +6,7 @@ import Image from 'next/image';
 const HomePage = async () => {
 
   const movies = await getTrendingMovies();  
-  console.log(movies);
+  //console.log(movies);
 
   return (
     <section className='contenedor py-3'>
